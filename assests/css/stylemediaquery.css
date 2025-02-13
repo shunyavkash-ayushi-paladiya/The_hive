@@ -2,6 +2,9 @@
     .header_unorderlist{
         gap: 20px;
     }
+    .purpose_para{
+        max-width: 400px;
+      }
 }
 
 @media screen and (max-width:1024px){
@@ -17,6 +20,17 @@
         padding: 20px 0;
         z-index: 999;
     }
+
+    .section:before {
+        clip-path: polygon(0 0%, 100% 0%, 89% 100%, 0 100%);
+    }
+    .sections:before {
+        clip-path: polygon(0 0%, 100% 0%, 89% 100%, 0 100%);
+    }
+
+    .purpose_para{
+        max-width: 400px;
+      }
 
     .header_unorderlist li {
         margin-top: 20px;
@@ -123,6 +137,15 @@
         position: static;
         margin-top: 142px;
     }
+
+    .hero_sections_text {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        position: static;
+        margin-top: 142px;
+    }
+
     .header_logos_image{
         display:block;
     }
@@ -140,6 +163,10 @@
     }
 
     .hero_section_para{
+        color: var(--theme-black);
+    }
+
+    .hero_section_paras{
         color: var(--theme-black);
     }
 
@@ -170,7 +197,45 @@
     align-items: flex-start;
     gap: 20px;
 }
+.text_left_section_text{
+    max-width: 400px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
 
+}
+.text_left_sections_text{
+    max-width: 400px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+
+}
+.text_right_section_para{
+    line-height: 25px;
+    max-width:400px ;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 18;
+    overflow: hidden;
+}
+.text_right_sections_para{
+    line-height: 25px;
+    max-width:400px ;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 18;
+    overflow: hidden;
+}
+.text_inner{
+    grid-template-columns: repeat(2,1fr);
+    gap: 20px;
+}
+.purpose_para{
+    max-width: 200px;
+  }
 }
 
 @media screen and (max-width:575px){
@@ -178,6 +243,10 @@
         font-size: 12px;
     }
     .hero_section_para{
+        font-size: 40px;
+        max-width: 400px;
+    }
+    .hero_section_paras{
         font-size: 40px;
         max-width: 400px;
     }
@@ -214,6 +283,9 @@
     .follow_us_inner{
         display: block;
     }
+    .follow_us__inner{
+        display: block;
+    }
     .follow_us_left_section_para{
         max-width: 200px;
     }
@@ -226,12 +298,84 @@
         flex-direction: column;
         gap: 60px;
     }
+    .footers_inner{
+        flex-direction: column;
+        gap: 60px;
+    }
     .footer_input{
         justify-content: left;
     }
     .mini_footer_inner{
         flex-direction: column;
         gap: 30px;
+    }
+    .mini_footers_inner{
+        flex-direction: column;
+        gap: 30px;
+    }
+    .text_left_section_text{
+        max-width: 400px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+    .text_left_sections_text{
+        max-width: 400px;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 4;
+        overflow: hidden;
+    }
+    .text_right_section_para{
+        line-height: 25px;
+        max-width:400px ;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+    }
+    .text_right_sections_para{
+        line-height: 25px;
+        max-width:400px ;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 6;
+        overflow: hidden;
+    }
+    .text_inner{
+        padding-top: 50px;
+        grid-template-columns: repeat(1,1fr);
+        gap: 20px;
+    }
+    .section:before {
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 44%);
+        width: 100%;
+    }
+    .sections:before {
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 44%);
+        width: 100%;
+    }
+   .section .inner-content{
+    text-align: center;
+   }
+   .sections .inner-content{
+    text-align: center;
+   }
+   .purpose_para {
+    max-width: 500px;
+    }
+    .purpose_heading{
+    font-size: 30px;
+    }
+    .purpose_a{
+        font-size: 12px;
+    }
+    .information_inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .Sustainability_inner{
+      flex-direction: column-reverse;
     }
 }
 

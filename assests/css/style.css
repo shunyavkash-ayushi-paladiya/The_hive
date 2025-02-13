@@ -23,6 +23,12 @@ body {
     font-family: 'Libre Franklin';
 }
 
+.whoweare_body{
+  font-size: 16px;
+    background-color: var(--theme-yellow);
+    font-family: 'Libre Franklin';
+}
+
 .container {
     max-width: 1440px;
     margin:0 auto;
@@ -36,6 +42,8 @@ a{
     color: currentColor;
     display: inline-block;
 }
+
+/* home page  */
 
 /* mini header section  */
 
@@ -816,3 +824,386 @@ input{
     font-size: 16px;
     font-weight: 300;
 }
+
+/* Who We Are page  */
+
+/* hero section  */
+
+.hero_section_paras{
+    max-width: 600px;
+    color: var(--theme-white);
+    font-size: 55px;
+    font-weight: 300;
+    margin-top: 20px;
+}
+
+.hero_sections_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 40%;
+}
+
+/* text section  */
+
+.text{
+    background-color: var(--theme-yellow);
+}
+
+.text_inner{
+    padding-top: 120px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+}
+
+.text_left_section_text{
+    color: var(--theme-green);
+    font-size: 34px;
+    font-weight: 400;
+    max-width: 450px;
+}
+
+.text_right_section_para{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--theme-green);
+    line-height: 25px;
+    max-width:500px ;
+}
+
+
+/* who we are card slider section */
+
+.swiper {
+    width: 100%;
+    height: 100%;
+  }
+
+  .my__swipers .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: var(--theme-yellow);
+    margin-top: 40px;
+  }
+
+  .my__swipers .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .card_slider_inner{
+    margin-top: 100px;
+  }
+  .circle_card_primary,
+  .circle_card_secondary,
+  .circle_card_ternory {
+      border-radius: 50%; 
+      background-color: var(--theme-green);
+      width: 250px; 
+      height: 250px;
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center; 
+      overflow: hidden; 
+      margin: auto;
+  }
+ 
+  .circle_cards_heading{
+    font-size: 30px;
+    color: var(--theme-green);
+    font-weight: 400;
+}
+
+.circle_cards_para{
+    padding-top: 10px;
+    color: var(--theme-green);
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 250px;
+    text-align: center;
+    margin: auto;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+}
+
+/* swiper slider cards */
+
+.swiper_cards_heading{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    color: var(--theme-green);
+}
+
+/* our purpose section  */
+
+.section{
+    position:relative;
+    background-image:url("../images/sections/jaimy-de-hon-QjmYgx1K6T4-unsplashs.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .section:before{
+     content: "";
+     position:absolute;
+     left:0;
+     top:0;
+     clip-path: polygon(0 0%, 100% 0%, 75% 100%, 0 100%);
+     background-color:var(--theme-orange);
+     width:50%;
+     height:100%;
+  }
+
+  .section .inner-content{
+    position:relative;
+    z-index:9999;
+    padding-block:100px;
+    max-width:450px;
+  }
+  
+  .purpose_heading{
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--theme-white);
+  }
+
+  .purpose_para{
+    margin-top: 10px;
+    color: var(--theme-white);
+    font-size: 16px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    font-weight: 300;
+    max-width: 700px;
+  }
+
+  .purpose_a{
+    margin-top: 20px;
+    color: var(--theme-white);
+    font-weight: 500;
+    background-color: var(--theme-green);
+    padding: 15px 30px;
+    clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
+  }
+  
+  .image-content{
+    position:absolute;  
+    left:0;
+    top:0;
+  }
+
+  .image-content img{
+      width:100%;
+      height:100%;
+      object-fit:cover;
+      display:block;
+  }
+
+/* card section */
+
+.cards_inner{
+    margin-top: 100px;
+    padding-bottom: 150px;
+}
+
+.cards_head{
+    font-size: 40px;
+    color: var(--theme-green);
+    font-weight: 300;
+}
+
+/* follow us section */
+
+.follow__us{
+    background-color: var(--theme-green);
+}
+
+.follow_us__inner{
+    padding-top: 60px;
+    display: flex;
+    gap: 35px;
+}
+
+/* footer section  */
+
+.footers{
+    background-color: var(--theme-green);
+}
+
+.footers_inner{
+    padding-top: 70px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* mini footer  */
+
+.mini_footers{
+    background-color: var(--theme-green);
+}
+
+.mini_footers_inner{
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 50px;
+}
+
+/* our purpose page  */
+
+/* text section  */
+
+.text_left_sections_text {
+    color: var(--theme-white);
+    font-size: 34px;
+    font-weight: 400;
+    max-width: 450px;
+}
+
+.text_right_sections_para {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--theme-white);
+    line-height: 25px;
+    max-width: 500px;
+}
+
+/* information section  */
+
+.information_inner{
+    margin-top: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.information_left_section_heading{
+    font-size: 12px;
+    color: var(--theme-orange);
+    font-weight: 300;
+}
+
+.information_left_heading{
+    margin-top: 15px;
+    color: var(--theme-white);
+    font-weight: 300;
+}
+
+.information_left_section_para{
+    color: var(--theme-white);
+    font-size: 16px;
+    font-weight: 200;
+    max-width: 500px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    margin-top: 15px;
+    line-height: 22px;
+}
+
+.information_right_section img{
+   width: 100%;
+   object-fit: cover;
+}
+
+.information_a{
+    margin-top: 20px;
+    color: var(--theme-white);
+    font-weight: 500;
+    background-color: var(--theme-orange);
+    padding: 15px 45px;
+    clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
+    font-size: 12px;
+}
+
+/* Sustainability section */
+
+.Sustainability_inner{
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+    margin-bottom: 100px;
+}
+
+.Sustainability_a{
+    margin-top: 20px;
+    color: var(--theme-white);
+    font-weight: 500;
+    background-color: var(--theme-orange);
+    padding: 15px 45px;
+    clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
+    font-size: 12px;
+}
+
+.Sustainability_left_section img{
+    width: 100%;
+    object-fit: cover;
+ }
+
+ .Sustainability_right_section_para{
+    color: var(--theme-white);
+    font-size: 16px;
+    font-weight: 200;
+    max-width: 500px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 6;
+    overflow: hidden;
+    margin-top: 15px;
+    line-height: 22px;
+}
+
+.Sustainability_right_section_heading{
+    font-size: 12px;
+    color: var(--theme-orange);
+    font-weight: 300;
+}
+
+.Sustainability_right_heading{
+    margin-top: 15px;
+    color: var(--theme-white);
+    font-weight: 300;
+}
+
+/* our purpose section  */
+
+.sections{
+    position:relative;
+    background-image:url("../images/sections/3fa4ef5b2508dd7f01d40bba9d425b31.png");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+  }
+  
+  .sections:before{
+     content: "";
+     position:absolute;
+     left:0;
+     top:0;
+     clip-path: polygon(0 0%, 100% 0%, 75% 100%, 0 100%);
+     background-color:var(--theme-orange);
+     width:50%;
+     height:100%;
+  }
+
+  .sections .inner-content{
+    position:relative;
+    z-index:9999;
+    padding-block:100px;
+    max-width:450px;
+  }
