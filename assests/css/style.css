@@ -988,11 +988,12 @@ input{
   }
 
   .purpose_a{
+    font-size: 12px;
     margin-top: 20px;
     color: var(--theme-white);
     font-weight: 500;
     background-color: var(--theme-green);
-    padding: 15px 30px;
+    padding: 15px 40px;
     clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
   }
   
@@ -1207,3 +1208,100 @@ input{
     padding-block:100px;
     max-width:450px;
   }
+
+  /* Resources News page  */
+
+
+
+  .sections_hero {
+    position: relative;
+    background-image: url("../images/sections/1647694310.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%; 
+  
+}
+
+.sections_hero:before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    clip-path: polygon(75% 0%, 49% 48%, 75% 100%, 0% 100%, 0 49%, 0% 0%);
+    background-color: var(--theme-orange);
+    width: 79%;
+    height: 100%;
+}
+
+.sections_hero .inner-content {
+    position: relative;
+    z-index:1;
+    padding-block: 173px;
+    max-width: 450px;
+}
+
+.section_hero_head {
+    font-size: 12px;
+    color: var(--theme-white);
+    font-weight: 100;
+}
+
+.purpose_headings {
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--theme-white);
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.purpose_para {
+    color: var(--theme-white);
+    font-size: 16px;
+    margin-top: 20px;
+    line-height: 1.5;
+    max-width: 600px;
+    margin: 20px auto;
+    margin-right: auto;
+    margin-left: 0;
+}
+
+.purpose_a {
+    background-color: var(--theme-green);
+    color: var(--theme-white);
+    padding: 15px 30px;
+    text-decoration: none;
+    margin-top: 20px;
+}
+
+.resources{
+    background-color: var(--theme-yellow);
+}
+
+.resources_inner{
+    padding-top: 100px;
+}
+
+.resources_headers{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.resources_heading{
+    font-size: 40px;
+    font-weight: 300;
+    color: var(--theme-green);
+}
+
+.resources_buttons{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.resources_text{
+    color: var(--theme-green);
+    font-size: 12px;
+}
