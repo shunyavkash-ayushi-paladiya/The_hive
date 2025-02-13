@@ -1304,4 +1304,5 @@ input{
 .resources_text{
     color: var(--theme-green);
     font-size: 12px;
+    font-weight: 400;
 }
