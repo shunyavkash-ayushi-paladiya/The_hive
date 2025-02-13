@@ -8,10 +8,10 @@
     .header_unorderlist {
         display: none;
         position: absolute;
-        top: 124px;
+        top: 117px;
         left: 0;
         width: 100%;
-        background-color: var(--theme-white);
+        background-color: var(--theme-yellow);
         flex-direction: column;
         gap: 20px;
         padding: 20px 0;
@@ -73,6 +73,17 @@
         position: absolute;
         transition: all 1s ease-out;
         width: 100%;
+    }
+    .circle_card_inner{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .contact_location{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
     }
 }
 
@@ -148,6 +159,18 @@
     .card_main {
         grid-template-columns: repeat(2, 1fr);
     }
+    .circle_cards_primary,
+    .circle_cards_secondary,
+    .circle_cards_ternory {
+    width: 280px; 
+    height: 280px;
+}
+.contact_location{
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+}
+
 }
 
 @media screen and (max-width:575px){
@@ -171,5 +194,58 @@
     }
     .card_main {
         grid-template-columns: repeat(1, 1fr);
+    }
+    .primary-para{
+        max-width: 400px;
+        font-size: 33px;
+    }
+    .heading_head{
+        font-size: 35px;
+    }
+    .circle_card_inner{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        align-items: center;
+        justify-content: center;
+    }
+    .swipers_text{
+        font-size: 30px;
+    }
+    .follow_us_inner{
+        display: block;
+    }
+    .follow_us_left_section_para{
+        max-width: 200px;
+    }
+    .contact_location{
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+    }
+    .footer_inner {
+        flex-direction: column;
+        gap: 60px;
+    }
+    .footer_input{
+        justify-content: left;
+    }
+    .mini_footer_inner{
+        flex-direction: column;
+        gap: 30px;
+    }
+}
+
+@media screen and (max-width:425px){
+    .mini_footer_unorderlist {
+        flex-direction:column ;
+    }
+    .mini_footer_right_section_para strong {
+        font-size: 23px;
+    }
+}
+
+@media screen and (max-width:375px){
+    .swipers_text{
+        font-size: 24px;
     }
 }
