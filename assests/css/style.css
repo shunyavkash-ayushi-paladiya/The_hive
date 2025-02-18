@@ -807,6 +807,8 @@ input {
     clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
     outline: none;
     border: 0;
+    padding-right: 40px;
+    padding-right: 117px;
 }
 
 .play_svg_a {
@@ -3133,4 +3135,22 @@ form{
         display: grid;
         grid-template-columns: repeat(3,1fr);
         margin-top: 40px;
+        gap: 20px;
+    }
+
+    .nest_card_text{
+        font-size: 18px;
+        font-weight: 500;
+        color: var(--theme-green);
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .nest_card_para{
+       font-size: 14px;
+       font-weight: 100;
+       color: var(--theme-green);
+       text-align: center;
+       margin-top: 5px;
+       margin-bottom: 35px;
     }
