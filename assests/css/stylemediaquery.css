@@ -1,3 +1,12 @@
+@media screen and (max-width:1440px){
+    .swiper_arrows{
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        margin-top: 60px;
+      }
+}
 @media screen and (max-width:1130px){
     .header_unorderlist{
         gap: 20px;
@@ -26,6 +35,9 @@
     }
     .sections:before {
         clip-path: polygon(0 0%, 100% 0%, 89% 100%, 0 100%);
+    }
+    .sections_s::before{
+        clip-path: polygon(0 0, 80% 0%, 100% 100%, 0% 100%);
     }
     .sections_hero:before {
         width: 100%;
@@ -100,6 +112,24 @@
         align-items: flex-start;
         gap: 20px;
     }
+    .sections_want_learn:before {
+        clip-path: polygon(0 0%, 100% 0%, 89% 100%, 0 100%);
+    }
+    .button{
+        flex-direction: column;
+    }
+    .privacy_policy_left_section {
+        width: 37%;
+}
+}
+
+@media screen and (max-width:1024px) and (min-width:769px){
+    .sign_in .sign_in_inner{
+    max-width: 350px;
+    }
+    .sign_in:before{
+        width: 100%;
+    }
 }
 
 @media screen and (max-width:768px){
@@ -120,6 +150,10 @@
         height: 100%;
         position: absolute;
         transition: all 1s ease-out;
+        width: 100%;
+    }
+    .sections_s::before{
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 44%);
         width: 100%;
     }
     .hero_section {
@@ -259,7 +293,7 @@
     gap: 20px;
 }
 .purpose_para{
-    max-width: 200px;
+    max-width: 300px;
   }
   .sections_hero {
     height: 100vh;
@@ -283,7 +317,7 @@
     padding: 10px 23px;
 }
 .play_svg_a {
-    padding: 15px 25px;
+    padding: 15px 26px;
 }
 .sticky_inner{
     display: flex;
@@ -298,7 +332,131 @@
     width: 100%;
     position: static;
 }
+.purposes_heading {
+    font-size: 29px;
 }
+.service_a{
+    display: none;
+}
+.service_1{
+    display: none;
+ }
+ .service_2{
+    display: block;
+ }
+
+.form_left_section_heading {
+    font-size: 32px;
+    font-weight: 400;
+    color: var(--theme-white);
+}
+    .form_left_section_heading {
+        font-size: 40px;
+    }
+    .contact_information {
+        margin-top: 20px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    .contact_info, .mail_info {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-size: 14px;
+    }
+    .contact_info, .mail_info {
+        font-size: 16px;
+    }
+    .form_right_section {
+        width: 100%;
+        max-width: 800px;
+    }
+    
+    form {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        text-align: center;
+        width: 100%;
+    }
+    
+    .first_row, .second_row {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        width: 100%;
+    }
+     .first_row, .second_row {
+        flex-direction: row;
+    }
+    .first_row, .second_row {
+        flex-direction: row;
+    }
+    textarea {
+        resize: vertical;
+    }
+    
+    .checkbox-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 12px;
+        gap: 10px;
+    }
+    
+    .submit-btn {
+        font-size: 14px;
+        padding: 15px 30px;
+        background-color: var(--theme-orange);
+        color: var(--theme-white);
+        border: none;
+        cursor: pointer;
+        max-width: fit-content;
+        margin: auto;
+    }
+    .sign_in:before {
+        clip-path: polygon(50% 0%, 100% 0, 100% 56%, 100% 56%, 100% 100%, 49% 76%, 0 100%, 0 57%, 0 57%, 0 0);
+        height: 85%;
+        width: 100%;
+    }
+    .sign_in .sign_in_inner {
+        margin: auto;
+    }
+
+    .sign_in_form{
+        gap: 0;
+    }
+    .privacy_policy_inner{
+        flex-direction: column;
+    }
+    .privacy_policy_left_section{
+        position: static;
+        width: 100%;
+        flex-direction: row;
+        height: 0%;
+        align-items: center;
+        gap: 30px;
+    }
+    .privacy_section_heading{
+        color: var(--theme-black);
+    }
+    .privacy_section_para{
+        color: var(--theme-black);
+    }
+    .terms_and_condition_section_heading{
+        color: var(--theme-black);
+    }
+    .sections_s .content_inner{
+        margin: auto;
+        text-align: center;
+       }
+}
+
+
+
+
 
 @media screen and (max-width:575px){
     .hero_section_heading {
@@ -450,6 +608,7 @@
     }
     .purpose_a{
         font-size: 12px;
+        background-color: var(--theme-green);
     }
     .information_inner{
         grid-template-columns: repeat(1,1fr);
@@ -478,6 +637,173 @@
     .update_inner{
         grid-template-columns: repeat(1,1fr);
     }
+    .sections_want_learn:before {
+        clip-path: polygon(0 0%, 100% 0%, 100% 100%, 0 44%);
+        width: 100%;
+    }
+    .sections_want_learn .inner-content{
+        text-align: center;
+       }
+       .purpose_para {
+        max-width: 500px;
+        }
+        .purpose_heading{
+        font-size: 30px;
+        }
+        .news_inner{
+           flex-direction: column;
+           gap: 0;
+        }
+        .news_left_section_heading{
+            display: none;
+        }
+        .news_left_section_a{
+            display: none;
+        }
+        .news_left_Section {
+            gap: 0px;
+            padding: 0px;
+            height: 0px;
+}
+.preach_heading{
+    color: var(--theme-black);
+    font-size: 38px;
+}
+
+.preach_para{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 5;
+    overflow: hidden;
+    margin-top: 10px;
+    line-height: 22px;
+}
+
+.preach_heading strong{
+    font-weight: 600;
+    color: var(--theme-black);
+}
+.creative_para{
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 8;
+    overflow: hidden;
+    margin-top: 10px;
+    line-height: 22px;
+}
+.case_study_heading strong{
+    font-size: 40px;
+    font-weight: 500;
+    margin-top: 6px;
+    color: var(--theme-black);
+}
+
+.case_study_heading{
+    color: var(--theme-black);
+    font-size: 40px;
+}
+
+.case_study_anchor{
+    display: block;
+}
+
+.case_study_a{
+    display: none;
+}
+
+.case_study_anchors{
+    display: block;
+}
+
+.transfoming__cards{
+    display: none;
+}
+
+.transfoming_inner{
+    padding-top: 0px;
+    padding-bottom: 150px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+}
+.transfoming_card{
+    margin-top: 50px;
+}
+.work_culture_inner {
+    grid-template-columns: repeat(1,1fr);
+}
+.work_culture_left_heading{
+   font-size: 30px;
+}
+.outcome_heading{
+    font-size: 33px;
+    max-width: 400px;
+ }
+ .form_section_inner{
+    flex-direction: column;
+ }
+ .first_row{
+    flex-direction: column;
+ }
+ .second_row{
+    flex-direction: column;
+ }
+ .checkbox-container input {
+    appearance: none;
+    width: 20px; 
+    height: 20px;
+    border: 2px solid var(--theme-white); 
+    border-radius: 0px; 
+    background-color: var(--theme-white); 
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: none;
+    transition: all 0.3s ease;
+    clip-path: none;
+    padding: 0;
+}
+.modal-content h2 strong{
+    font-weight: 600;
+}
+
+.modal-content{
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.nest_section_buttons{
+    flex-direction: column;
+}
+.nest_section_heading{
+    font-size: 45px;
+}
+.nest_section{
+    clip-path: polygon(0 0, 100% 0, 100% 94%, 0% 100%);
+}
+.accordion__btn{
+    font-size: 17px;
+}
+.downloads_tabs{
+    flex-direction: column;
+    align-items: baseline;
+    gap: 20px;
+}
+.download_buttons_a{
+    width: 30px;
+    height: 30px;
+}
+}
+
+
+@media (max-width: 480px) {
+    .form_left_section_heading {
+        font-size: 28px;
+    }
 }
 
 @media screen and (max-width:425px){
@@ -488,12 +814,20 @@
         font-size: 23px;
     }
     .play_svg_a {
-        left: 82%;
+        left: 81%;
+    }
+    .transfoming_inner {
+        padding-top: 0px;
     }
 }
+
 
 @media screen and (max-width:375px){
     .swipers_text{
         font-size: 24px;
+    }
+    .case_study_bottom_section{
+        flex-direction: column;
+        align-items: start;
     }
 }

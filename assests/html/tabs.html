@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Tabs</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://unpkg.com/tailwindcss@2.2.19/dist/tailwind.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+</head>
+
+<style>
+    /* Container to center content */
+    .container {
+        max-width: 1440px;
+        margin: 0 auto;
+        padding: 20px;
+    }
+
+    /* Tabs Styling */
+    .tabs {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        gap: 10px;
+        margin-bottom: 20px;
+    }
+
+    .tabs li {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 12px;
+        cursor: pointer;
+        font-size: 1.1rem;
+        text-align: center;
+        background: #333;
+        border-radius: 8px;
+        color: #FFF;
+        transition: all 0.3s ease;
+    }
+
+    .tabs li:hover {
+        background-color: #e31837;
+    }
+
+    .tabs li.current {
+        background-color: #e31837;
+        font-weight: bold;
+    }
+
+    .tabs svg {
+        margin-right: 8px;
+    }
+
+    /* Tab Content Styling */
+    .tab-content {
+        display: none;
+        background: #f2f2f2;
+        padding: 20px;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .tab-content.current {
+        display: block;
+    }
+
+    /* Flexbox for content and image alignment */
+    .conrent {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    /* Text Styling */
+    .text_content h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 15px;
+    }
+
+    .text_content p {
+        font-size: 1rem;
+        color: #555;
+        line-height: 1.5;
+        max-width: 500px;
+    }
+
+    .swiper_card{
+    background-color: rgb(222, 163, 36);
+}
+
+.swiper_card_inner{
+    padding-bottom: 150px;
+}
+
+.swiper_heading_text{
+    padding-top: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.swipers_text{
+    color: green;
+    font-size: 40px;
+    font-weight: 400;
+}
+
+.swipers_arrows{
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.swipers_arrow_a{
+    background-color: green;
+    border-radius: 50px;
+    padding: 5px;
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+}
+
+.mySwipers .swiper-slide {
+    text-align: left;
+    font-size: 18px;
+    background-color: green;
+}
+
+.mySwipers .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.swiper_cards_image{
+    width: 100%;
+    height: 100%;
+}
+
+.swipers_arrow_a {
+    cursor: pointer;
+}
+
+.swipers_arrow_a.disabled {
+    opacity: 0.5;
+    pointer-events: none; 
+}
+
+.swiper_cards_text{
+    margin-top: 15px;
+    padding: 20px;
+}
+
+.swiper_card_span{
+    font-size: 14px;
+    font-weight: 400;
+    color: orange;
+}
+
+.swiper_card_heading{
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 400;
+    color: white;
+}
+
+.swiper_card_para{
+    margin-top: 10px;
+    font-size: 16px;
+    font-weight: 400;
+    max-width: 350px;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    color: white;
+}
+
+    /* Responsive for smaller devices */
+    @media screen and (max-width: 768px) {
+        .tabs {
+            grid-template-columns: 1fr 1fr;
+        }
+
+        .tabs li {
+            font-size: 1rem;
+            padding: 10px;
+        }
+
+        .text_content h2 {
+            font-size: 1.5rem;
+        }
+
+        .text_content p {
+            font-size: 0.9rem;
+        }
+
+        .conrent {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .conrent img {
+            max-width: 80%;
+            margin-top: 15px;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <ul class="tabs">
+            <li class="tab current" data-tab="tab-1">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-cake">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M3 20h18v-8a3 3 0 0 0 -3 -3h-12a3 3 0 0 0 -3 3v8z" />
+                    <path d="M3 14.803c.312 .135 .654 .204 1 .197a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1a2.4 2.4 0 0 0 2 -1a2.4 2.4 0 0 1 2 -1a2.4 2.4 0 0 1 2 1a2.4 2.4 0 0 0 2 1c.35 .007 .692 -.062 1 -.197" />
+                </svg>
+                <h4 class="capitalize">Age</h4>
+            </li>
+            <li class="tab" data-tab="tab-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-user">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M8 7a4 4 0 1 0 8 0a4 4 0 0 0 -8 0" />
+                    <path d="M6 21v-2a4 4 0 0 1 4 -4h4a4 4 0 0 1 4 4v2" />
+                </svg>
+                <h4 class="capitalize">Occupation</h4>
+            </li>
+            <li class="tab" data-tab="tab-3">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-car">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M7 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M17 17m-2 0a2 2 0 1 0 4 0a2 2 0 1 0 -4 0" />
+                    <path d="M5 17h-2v-6l2 -5h9l4 5h1a2 2 0 0 1 2 2v4h-2m-4 0h-6m-6 -6h15m-6 0v-5" />
+                </svg>
+                <h4 class="capitalize">Type of Car</h4>
+            </li>
+            <li class="tab" data-tab="tab-4">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-map-pin">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M9 11a3 3 0 1 0 6 0a3 3 0 0 0 -6 0" />
+                    <path d="M17.657 16.657l-4.243 4.243a2 2 0 0 1 -2.827 0l-4.244 -4.243a8 8 0 1 1 11.314 0z" />
+                </svg>
+                <h4 class="capitalize">Where You Live</h4>
+            </li>
+            <li class="tab" data-tab="tab-5">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icons-tabler-outline icon-tabler-certificate">
+                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                    <path d="M15 15m-3 0a3 3 0 1 0 6 0a3 3 0 1 0 -6 0" />
+                    <path d="M13 17.5v4.5l2 -1.5l2 1.5v-4.5" />
+                    <path d="M10 19h-5a2 2 0 0 1 -2 -2v-10c0 -1.1 .9 -2 2 -2h14a2 2 0 0 1 2 2v10a2 2 0 0 1 -1 1.73" />
+                    <path d="M6 9l12 0" />
+                    <path d="M6 12l3 0" />
+                    <path d="M6 15l2 0" />
+                </svg>
+                <h4 class="capitalize">Diving History</h4>
+            </li>
+        </ul>
+
+        <!-- Tab Content -->
+        <div id="tab-1" class="tab-content current">
+            <div class="conrent">
+                <div class="text_content">
+                    <h2>Age</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A iure dignissimos vel maiores et eveniet...</p>
+                </div>
+                <img src="../images/sections/Rectangle 241.png" alt="Age Image" class="w-1/3">
+            </div>
+        </div>
+
+        <div id="tab-2" class="tab-content">
+            <div class="conrent">
+                <div class="text_content">
+                    <h2>Occupation</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A iure dignissimos vel maiores et eveniet...</p>
+                </div>
+                <img src="../images/sections/Rectangle 242.png" alt="Occupation Image" class="w-1/3">
+            </div>
+        </div>
+
+        <div id="tab-3" class="tab-content">
+            <div class="conrent">
+                <div class="text_content">
+                    <h2>Type of Car</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A iure dignissimos vel maiores et eveniet...</p>
+                </div>
+                <img src="../images/sections/Rectangle 243.png" alt="Car Image" class="w-1/3">
+            </div>
+        </div>
+
+        <div id="tab-4" class="tab-content">
+            <div class="conrent">
+                <div class="text_content">
+                    <h2>Where You Live</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A iure dignissimos vel maiores et eveniet...</p>
+                </div>
+                <img src="../images/sections/Rectangle 246.png" alt="Location Image" class="w-1/3">
+            </div>
+        </div>
+
+        <div id="tab-5" class="tab-content">
+            <div class="conrent">
+                <div class="text_content">
+                    <h2>Diving History</h2>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A iure dignissimos vel maiores et eveniet...</p>
+                </div>
+                <img src="../images/sections/Rectangle 243.png" alt="Diving History Image" class="w-1/3">
+            </div>
+        </div>
+    </div>
+
+    <section class="swiper_card">
+        <div class="container">
+           <div class="swiper_card_inner">
+               <div class="swiper_heading_text">
+                   <h2 class="swipers_text">
+                       Our Resources
+                   </h2>
+                   <div class="swipers_arrows">
+                       <a href="#" class="swipers_arrow_a">
+                           <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-left">
+                               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                               <path d="M5 12l14 0" />
+                               <path d="M5 12l6 6" />
+                               <path d="M5 12l6 -6" />
+                           </svg>
+                       </a>
+                       <a href="#" class="swipers_arrow_a">
+                           <svg  xmlns="http://www.w3.org/2000/svg"  width="35"  height="30"  viewBox="0 0 24 24"  fill="none"  stroke="#fff"  stroke-width="2"  stroke-linecap="round"  stroke-linejoin="round"  class="icon icon-tabler icons-tabler-outline icon-tabler-arrow-right">
+                               <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                               <path d="M5 12l14 0" />
+                               <path d="M13 18l6 -6" />
+                               <path d="M13 6l6 6" />
+                           </svg>
+                       </a>
+                   </div>
+               </div>
+               <div class="swiper mySwipers">
+                   <div class="swiper-wrapper">
+                       <div class="swiper-slide">
+                           <div class="swiper_cards_image">
+                               <img src="../images/sections/Rectangle 244.png" alt="">
+                           </div>
+                           <div class="swiper_cards_text">
+                               <h4 class="swiper_card_span">
+                                 GENERAL
+                               </h4>
+                               <h2 class="swiper_card_heading">
+                                   Transforming working cultures
+                               </h2>
+                               <p class="swiper_card_para">
+                                   At The Hive, our clients rely on us to guide them through change in culture and 
+                                   performance using our 3 step process grounded in empathy, collaboration and purposeful leadership.
+                               </p>
+                            </div>
+                       </div>
+                       <div class="swiper-slide">
+                           <div class="swiper_cards_image">
+                               <img src="../images/sections/Rectangle 242.png" alt="">
+                           </div>
+                           <div class="swiper_cards_text">
+                               <h4 class="swiper_card_span">
+                                 GENERAL
+                               </h4>
+                               <h2 class="swiper_card_heading">
+                                   Transforming working cultures
+                               </h2>
+                               <p class="swiper_card_para">
+                                   At The Hive, our clients rely on us to guide them through change in culture and 
+                                   performance using our 3 step process grounded in empathy, collaboration and purposeful leadership.
+                               </p>
+                            </div>
+                       </div>
+                       <div class="swiper-slide">
+                           <div class="swiper_cards_image">
+                               <img src="../images/sections/Rectangle 243.png" alt="">
+                           </div>
+                           <div class="swiper_cards_text">
+                               <h4 class="swiper_card_span">
+                                 GENERAL
+                               </h4>
+                               <h2 class="swiper_card_heading">
+                                   Transforming working cultures
+                               </h2>
+                               <p class="swiper_card_para">
+                                   At The Hive, our clients rely on us to guide them through change in culture and 
+                                   performance using our 3 step process grounded in empathy, collaboration and purposeful leadership.
+                               </p>
+                            </div>
+                       </div>
+                       <div class="swiper-slide">
+                           <div class="swiper_cards_image">
+                               <img src="../images/sections/Rectangle 244.png" alt="">
+                           </div>
+                           <div class="swiper_cards_text">
+                               <h4 class="swiper_card_span">
+                                 GENERAL
+                               </h4>
+                               <h2 class="swiper_card_heading">
+                                   Transforming working cultures
+                               </h2>
+                               <p class="swiper_card_para">
+                                   At The Hive, our clients rely on us to guide them through change in culture and 
+                                   performance using our 3 step process grounded in empathy, collaboration and purposeful leadership.
+                               </p>
+                            </div>
+                       </div>
+                       <div class="swiper-slide">
+                           <div class="swiper_cards_image">
+                               <img src="../images/sections/Rectangle 242.png" alt="">
+                           </div>
+                           <div class="swiper_cards_text">
+                               <h4 class="swiper_card_span">
+                                 GENERAL
+                               </h4>
+                               <h2 class="swiper_card_heading">
+                                   Transforming working cultures
+                               </h2>
+                               <p class="swiper_card_para">
+                                   At The Hive, our clients rely on us to guide them through change in culture and 
+                                   performance using our 3 step process grounded in empathy, collaboration and purposeful leadership.
+                               </p>
+                            </div>
+                       </div>
+                       <div class="swiper-slide">
+                           <div class="swiper_cards_image">
+                               <img src="../images/sections/Rectangle 243.png" alt="">
+                           </div>
+                           <div class="swiper_cards_text">
+                               <h4 class="swiper_card_span">
+                                 GENERAL
+                               </h4>
+                               <h2 class="swiper_card_heading">
+                                   Transforming working cultures
+                               </h2>
+                               <p class="swiper_card_para">
+                                   At The Hive, our clients rely on us to guide them through change in culture and 
+                                   performance using our 3 step process grounded in empathy, collaboration and purposeful leadership.
+                               </p>
+                            </div>
+                       </div>
+                   </div>
+               </div>
+           </div>
+        </div>
+   </section>
+
+   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('ul.tabs li').on('click', function(){
+                var tab_id = $(this).attr('data-tab');
+                $('ul.tabs li').removeClass('current');
+                $('.tab-content').removeClass('current');
+                $(this).addClass('current');
+                $('#'+tab_id).addClass('current');
+            });
+        });
+
+        var swiper = new Swiper('.mySwipers', {
+    slidesPerView: 4,
+    spaceBetween: 30, 
+    // centeredSlides: true, 
+    // loop: true, 
+    pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+    },
+    navigation: {
+        nextEl: '.swipers_arrow_a:nth-child(2)',  
+        prevEl: '.swipers_arrow_a:nth-child(1)', 
+    },
+    breakpoints: {
+        320: { 
+            slidesPerView: 1,
+        },
+        375: { 
+            slidesPerView: 1,
+        },
+        425: { 
+            slidesPerView: 1,
+        },
+        575: { 
+            slidesPerView: 1,
+        },
+        768: { 
+            slidesPerView: 2,
+        },
+        1024: { 
+            slidesPerView: 3,
+        },
+        1200: { 
+            slidesPerView: 3.5,
+        }
+    },
+    on: {
+        slideChange: function () {
+            updateArrowState(swiper);
+        }
+    }
+});
+
+
+function updateArrowState(swiper) {
+    const prevArrow = document.querySelector('.swipers_arrow_a:nth-child(1)');
+    const nextArrow = document.querySelector('.swipers_arrow_a:nth-child(2)');
+
+    
+    if (swiper.isBeginning) {
+        prevArrow.classList.add('disabled');
+    } else {
+        prevArrow.classList.remove('disabled');
+    }
+
+    
+    if (swiper.isEnd) {
+        nextArrow.classList.add('disabled');
+    } else {
+        nextArrow.classList.remove('disabled');
+    }
+}
+    </script>
+</body>
+</html>
