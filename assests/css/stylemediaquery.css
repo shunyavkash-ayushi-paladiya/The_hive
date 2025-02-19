@@ -455,6 +455,14 @@
        .nest_cards{
         grid-template-columns: repeat(2,1fr);
     }
+    .questions{
+        flex-direction: column;
+        align-items: baseline;
+    }
+    .question{
+        flex-direction: column;
+        align-items: baseline;
+    }
 }
 
 
@@ -632,7 +640,7 @@
         padding: 10px 15px;
     }
     .play_svg_a {
-        left: 85%;
+        left: 86%;
     }
     .update_inner{
         grid-template-columns: repeat(1,1fr);
@@ -787,6 +795,8 @@
 }
 .accordion__btn{
     font-size: 17px;
+}.accordion__btns{
+    font-size: 17px;
 }
 .downloads_tabs{
     flex-direction: column;
@@ -832,5 +842,8 @@
     .case_study_bottom_section{
         flex-direction: column;
         align-items: start;
+    }
+    .download_tabs_anchor { 
+        padding: 8px 19px;
     }
 }
