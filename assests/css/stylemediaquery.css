@@ -561,7 +561,7 @@
         font-size: 30px;
     }
     .follow_us_inner{
-        display: block;
+        flex-direction: column;
     }
     .follow_us__inner{
         display: block;
@@ -867,7 +867,7 @@
         font-size: 23px;
     }
     .play_svg_a {
-        left: 81%;
+        left: 80%;
     }
     .transfoming_inner {
         padding-top: 0px;
