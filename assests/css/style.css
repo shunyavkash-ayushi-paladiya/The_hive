@@ -21,6 +21,7 @@ body {
     font-size: 16px;
     background-color: var(--theme-green);
     font-family: 'Libre Franklin';
+    scroll-behavior: smooth;
 }
 
 .whoweare_body{
@@ -38,7 +39,7 @@ body {
 }
 
 .container {
-    max-width: 1440px;
+    max-width: 1316px;
     margin:0 auto;
     padding: 0 20px;
     width: 100%;
@@ -87,7 +88,7 @@ a{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 30px 0;
+    padding-top: 74px;
 }
 
 .header{
@@ -110,30 +111,19 @@ a{
 
 .header_options_a{
     color: var(--theme-white);
-    font-size: 14px;
-    padding: 10px;
-    border-bottom: 4px solid transparent;
+    font-size: 13px;
     transition: all 0.3s ease;
-}
-
-.header_options_a:hover{
-   border-bottom: 4px solid var(--theme-green);
-   color: var(--theme-green);
+    line-height: 20px;
+    padding: 10px;
 }
 
 .header_anchor{
     color: var(--theme-black);
     font-weight: 500;
     background-color: var(--theme-white);
-    padding: 15px 30px;
+    padding: 17px 40px 17px 35px;
     clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
     transition: all 0.3s ease;
-    border: none;
-}
-
-.header_anchor:hover{
-    background-color: var(--theme-green);
-    color: var(--theme-white);
     border: none;
 }
 
@@ -213,9 +203,10 @@ a{
     position: absolute;
     left: 0;
     top: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(271deg, rgba(0, 0, 0, 0), rgba(0, 0, 0, 1));
     width: 100%;
     height: 100%;
+    opacity: 36%;
 }
 
 .hero_section{
@@ -230,38 +221,44 @@ a{
     /* padding-top: 200px; */
     position: absolute;
     top: 30%;
+    gap: 10px;
 }
 
 .hero_section_heading{
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 500;
     text-transform: uppercase;
     color: var(--theme-white);
+    letter-spacing: 1.2px;
+    line-height: 15px;
+
 }
 
 .hero_section_para{
-    max-width: 700px;
     color: var(--theme-white);
     font-size: 60px;
     font-weight: 300;
-    margin-top: 20px;
+    max-width: 730px;
+    line-height: 66px; 
 }
 
 .hero_section_buttons{
     display: flex;
     align-items: center;
-    gap: 15px;
-    margin-top: 20px;
+    gap: 10px;
+    margin-top: 15px;
 }
 
 .hero_section_whatwe{
    color: var(--theme-white);
    background-color: var(--theme-orange);
-   padding: 15px 40px;
+   padding: 18px 49px 17px 49px;
    clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
    font-weight: 500;
    font-size: 12px;
    transition: all 0.3s ease;
+   letter-spacing: 1.2px;
+   line-height: 15px;
 }
 
 .hero_section_whatwe:hover{
@@ -273,16 +270,14 @@ a{
     font-weight: 500;
     font-size: 12px;
     color: var(--theme-white);
+    padding: 18px 49px 17px 49px;
     border: 1px solid transparent;
-    padding: 15px 40px;
     transition: all 0.3s ease;
     clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
+    letter-spacing: 1.2px;
+   line-height: 15px;
 }
 
-.hero_section_whatwedo:hover{
-    color: var(--theme-white);
-    border: 1px solid #EDEDE5;
-}
 
 /* local charity section  */
 
@@ -309,6 +304,8 @@ a{
     font-weight: 500;
     text-transform: uppercase;
     color: var(--theme-white);
+    letter-spacing: 1.2px;
+   line-height: 15px;
 }
 
 .local_charity_inner{
@@ -320,29 +317,33 @@ a{
 }
 
 .local_charity_head{
-    max-width: 600px;
-    margin-top: 20px;
+    max-width: 561px;
+    margin-top: 10px;
     color: var(--theme-white);
     font-size: 50px;
     font-weight: 300;
+    line-height: 58px;
 }
 
 .loacal_charity_para{
-    max-width: 600px;
+    max-width: 632px;
     margin-top: 25px;
     color: var(--theme-white);
     font-weight: 300;
+    line-height: 26px;
 }
 
 .loacal_charity_readmore{
     margin-top: 20px;
     color: var(--theme-white);
     background-color: var(--theme-green);
-    padding: 15px 50px;
+    padding: 18px 55px 17px 55px;
     clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
     font-weight: 500;
     font-size: 12px;
     transition: all 0.3s ease;
+    letter-spacing: 1.2px;
+   line-height: 15px;
 }
 
 .loacal_charity_readmore:hover{
@@ -355,7 +356,7 @@ a{
 .card_heading{
     display: flex;
     justify-content: space-between;
-    text-align: center;
+    align-items: center;
 }
 
 .card{
@@ -379,18 +380,21 @@ a{
 .card_head{
     font-size: 40px;
     color: var(--theme-white);
-    font-weight: 300;
+    font-weight: 200;
+    line-height: 58px;
 }
 
 .card_anchor{
     color: var(--theme-white);
     background-color: var(--theme-green);
-    padding: 15px 50px;
+    padding: 18px 63px 17px 63px;
     clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
     font-weight: 500;
     font-size: 12px;
     text-transform: uppercase;
     transition: all 0.3s ease;
+    letter-spacing: 1.2px;
+   line-height: 15px;
 }
 
 .card_anchor:hover{
@@ -412,42 +416,35 @@ a{
 
 .card_mains{
     width: 100%;
-}
-
-.cards{
+    overflow: hidden;
     position: relative;
 }
 
+.card_mains:hover .card_text{
+    transform: translateY(0%);
+
+}
+
+
 .card_text{
     position: absolute;
-    bottom: 5%;
-    left: 5%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+    transform: translateY(100%);
+    bottom: 0;
+    left: 5%;
+    transition: all 0.3s ease;
+   
 }
 
 .card_header{
     color: var(--theme-white);
     font-size: 22px;
     font-weight: 500;
+    line-height: 28px;
 }
 
-.card_icon{
-    background-color: var(--theme-white);
-    border-radius: 30px;
-    width: 35px;
-    height: 35px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    transition: all 0.3s ease;
-}
-
-.card_icon:hover{
-    background-color: var(--theme-green);
-    color: var(--theme-white);
-}
 
 /* slider section  */
 
@@ -458,22 +455,26 @@ a{
 .primary-inner{
     text-align: center;
     width: 100%;
+    margin-top: -115px;
 }
 
 .primary-heading{
     color: var(--theme-white);
     font-size: 12px;
     font-weight: 500;
+    letter-spacing: 1.2px;
+    line-height: 15px;
 }
 
 .primary-para{
     color: var(--theme-yellow);
     font-size: 44px;
     font-weight: 300;
-    max-width: 800px;
+    max-width: 872px;
     margin: auto;
     font-style: italic;
     margin-top: 20px;
+    line-height: 59px;
 }
 
 .primary-head{
@@ -503,6 +504,8 @@ a{
     font-size: 13px;
     margin-top: 20px;
     color: var(--theme-white);
+    line-height: 20px;
+    font-weight: 500;
   }
   .swiper {
     margin-left: auto;
@@ -520,6 +523,18 @@ a{
     background: var(--theme-white);
 }
 
+.swiper-wrapper{
+    padding-bottom: 100px;
+}
+
+span.swiper-pagination-bullet{
+    width: 40px;
+    height: 4px;
+    border-radius: 0px;
+}
+
+
+
 /* heading section  */
 
 .heading{
@@ -535,6 +550,7 @@ a{
     color: var(--theme-white);
     font-size: 40px;
     font-weight: 300;
+    line-height: 58px;
 }
 
 .heading_head strong{
@@ -562,6 +578,7 @@ a{
     font-size: 30px;
     color: var(--theme-white);
     font-weight: 600;
+    line-height: 43px;
 }
 
 .circle_card_para{
@@ -569,8 +586,9 @@ a{
     color: var(--theme-white);
     font-size: 20px;
     font-weight: 300;
-    max-width: 200px;
+    max-width: 222px;
     text-align: center;
+    line-height: 26px;
     margin: auto;
 }
 
@@ -616,11 +634,13 @@ a{
     color: var(--theme-green);
     font-size: 40px;
     font-weight: 400;
+    line-height: 58px;
 }
 
 .swipers_arrows{
     display: flex;
     align-items: center;
+    justify-content: center;    
     gap: 14px;
 }
 
@@ -628,6 +648,11 @@ a{
     background-color: var(--theme-green);
     border-radius: 50px;
     padding: 5px;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .swiper {
@@ -667,22 +692,26 @@ a{
 }
 
 .swiper_card_span{
-    font-size: 14px;
-    font-weight: 400;
+    font-size: 12px;
+    font-weight: 500;
     color: var(--theme-orange);
+    letter-spacing: 1.68px;
+    line-height: 30px;
 }
 
 .swiper_card_heading{
     margin-top: 10px;
     font-size: 22px;
-    font-weight: 400;
+    font-weight: 500;
+    line-height: 26px;
 }
 
 .swiper_card_para{
     margin-top: 10px;
     font-size: 16px;
-    font-weight: 400;
+    font-weight: 310;
     max-width: 350px;
+    line-height: 26px;
     display: -webkit-box;
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 2;
@@ -711,13 +740,17 @@ a{
   }
 
   .follow_us_inner{
-    padding-top: 150px;
+    padding-top: 90px;
     display: flex;
     gap: 35px;
   }
 
   .follow_us_right_section { 
-    min-width: 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    overflow: hidden;
   }
 
   .follow_us_left_section{
@@ -731,6 +764,8 @@ a{
      font-size: 30px;
      font-weight: 400;
      color: var(--theme-white);
+     line-height: 39px;
+     max-width: 240px;
   }
 
   .follow_us_date {
@@ -767,8 +802,10 @@ a{
 
   .footer_left_heading{
     font-size: 50px;
-    font-weight: 400;
+    font-weight: 300;
     color: var(--theme-white);
+    letter-spacing: -0.5px;
+    line-height: 60px;
   }
 
   .contact_info {
@@ -785,11 +822,21 @@ a{
     gap: 35px;
   }
 
-  .phone_svg{
-    background-color: var(--theme-orange);
+  .phone_svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.phone_svg_icon {
+    background: var(--theme-orange);
     border-radius: 30px;
     padding: 10px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
   .contact_span{
     color: var(--theme-white);
@@ -797,18 +844,27 @@ a{
     font-weight: 200;
   }
 
+  .mail_svg {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
   .mail_span{
     color: var(--theme-white);
     font-size: 18px;
     font-weight: 200;
-  }
+  } 
 
-  .mail_svg{
-    background-color: var(--theme-orange);
+  .mail_svg_icon {
+    background: var(--theme-orange);
     border-radius: 30px;
     padding: 10px;
-  }
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
   .mail_info{
     text-align: center;
