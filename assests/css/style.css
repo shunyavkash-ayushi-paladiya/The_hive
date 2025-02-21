@@ -202,6 +202,40 @@ a{
     top: -5px;
 }
 
+
+/* another section  */
+
+.pages{
+    background-color: var(--theme-yellow);
+}
+
+.pages_inner{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.pages_inner ul{
+    display:grid;
+    grid-template-columns: repeat(5,1fr);
+    align-items: center;
+    gap: 10px;
+}
+
+.pages_inner ul li{
+    list-style: none;
+}
+
+.page_link{
+    text-transform: capitalize;
+    color: var(--theme-white);
+    font-weight: 300;
+    background-color: var(--theme-green);
+    padding: 17px 40px 17px 35px;
+    clip-path: polygon(9px 0%, 100% 0%, calc(100% - 9px) 100%, 0% 100%);
+    transition: all 0.3s ease;
+    border: none;
+}
+
 /* hero section  */
 
 .hero_section img{
