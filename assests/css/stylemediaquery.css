@@ -6,7 +6,7 @@
         justify-content: center;
       }
 }
-@media screen and (max-width:1130px){
+@media screen and (max-width:1150px){
     .header_unorderlist{
         gap: 20px;
     }
@@ -30,6 +30,7 @@
         gap: 20px;
         padding: 20px 0;
         z-index: 999;
+        height: 100vh;
     }
 
     .header_para{
@@ -61,6 +62,8 @@
         display: flex;
         align-items: start;
         padding-left: 30px;
+        justify-content: center;
+        height: 100vh;
     }
 
     .header .menu-icon {
@@ -502,6 +505,35 @@
     .form_section_inner{
         flex-direction: column;
     }
+    .follow_us_inner{
+        flex-direction: column;
+    }
+    .follow_us__inner{
+        flex-direction: column;
+    }
+    .information_inner{
+        grid-template-columns: repeat(1,1fr);
+    }
+    .information_right_section{
+        position: static;
+        width: 100%;
+    }
+    .Sustainability_inner{
+        flex-direction: column-reverse;
+      }
+      .Sustainability_left_section{
+        position: static;
+        width: 100%;
+    }
+    .information{
+        position: relative;
+        padding: 0;
+    }
+    
+    .Sustainability{
+        position: relative;
+        padding: 0;
+    }
 }
 
 
@@ -605,22 +637,12 @@
         margin-bottom: 100px;
     }
 
-    .swiper_heading_text{
-        padding-top: 50px;
-    }
-
     .local_charity_inner{
         padding-bottom: 400px;
     }
 
     .swipers_text{
         font-size: 30px;
-    }
-    .follow_us_inner{
-        flex-direction: column;
-    }
-    .follow_us__inner{
-        flex-direction: column;
     }
     .follow_us_left_section_para{
         max-width: 200px;
@@ -710,12 +732,6 @@
     .purpose_a{
         font-size: 12px;
         background-color: var(--theme-green);
-    }
-    .information_inner{
-        grid-template-columns: repeat(1,1fr);
-    }
-    .Sustainability_inner{
-      flex-direction: column-reverse;
     }
     .primary_resource_card{
         display: none;
@@ -902,7 +918,6 @@
     grid-template-columns: repeat(1,1fr);
 }
 }
-
 
 @media (max-width: 480px) {
     .form_left_section_heading {
