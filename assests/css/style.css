@@ -1455,7 +1455,7 @@ input {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    padding-block: 100px;
+    padding-block: 50px;
   }
   
   .sections:before{
