@@ -99,12 +99,15 @@ a{
     position: fixed ;
     width: 100%;
     z-index: 999;
+    top: 0;
+    left: 0;
+    padding-block: 20px;
 }
 
 .header_unorderlist{
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    /* justify-content: space-between; */
     list-style: none;
     gap: 40px;
 }
@@ -218,7 +221,7 @@ a{
     display:grid;
     grid-template-columns: repeat(5,1fr);
     align-items: center;
-    gap: 10px;
+    gap: 5px;
 }
 
 .pages_inner ul li{

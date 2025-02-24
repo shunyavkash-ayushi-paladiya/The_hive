@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Header</title>
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/stylemediaquery.css">
+    <link rel="stylesheet" href="../css/fonts.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-inner">
+                <div class="logo">
+                    <a href="#" class="header-logo">
+                        <img src="../images/logos/67a35277db162baeac47643d_brand-logo.svg" alt="Logo">
+                    </a>
+                </div>
+                <nav class="header-menu-wrapper">
+                    <ul class="nav-links">
+                        <li><a href="#" class="menu"><span>our team</span></a></li>
+                        <li><a href="#" class="menu"><span>case studies</span></a></li>
+                        <li class="our-service-wrapper">
+                            <a href="#" class="menu">
+                                <span>our services</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-chevron-down">
+                                    <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                                    <path d="M6 9l6 6l6 -6" />
+                                </svg>
+                            </a>
+                            <ul class="li-wrapper">
+                                <li><a href="#">submenu 1</a></li>
+                                <li><a href="#">submenu 2</a></li>
+                                <li><a href="#">submenu 3</a></li>
+                                <li><a href="#">submenu 4</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#" class="menu"><span>contact us</span></a></li>
+                        <div class="btn">
+                            <a href="#">Schedule a Call</a>
+                        </div>
+                    </ul>
+                </nav>
+                <div class="hamburger">
+                    <button class="hamburger-btn">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="icon icon-tabler icon-tabler-menu-2">
+                            <path stroke="none" d="M0 0h24v24H0z" fill="none"/>
+                            <path d="M4 6l16 0" />
+                            <path d="M4 12l16 0" />
+                            <path d="M4 18l16 0" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+    
+    <script>
+        document.querySelector('.hamburger-btn').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+        </script>
+
+</body>
+</html>
