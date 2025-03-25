@@ -1021,6 +1021,18 @@ input {
     font-weight: 300;
 }
 
+.follow_us_right_section::-webkit-scrollbar {
+    width: 5px;
+  }
+   
+  .follow_us_right_section::-webkit-scrollbar-thumb {
+    background: #ddd; 
+  }
+  
+  .follow_us_right_section::-webkit-scrollbar-track {
+    background: #666; 
+  }
+
 /* Who We Are page  */
 
 /* hero section  */
